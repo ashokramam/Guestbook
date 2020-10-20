@@ -3,6 +3,7 @@ package com.guestbook.dao;
 import java.util.List;
 
 import com.guestbook.beans.Entry;
+import com.guestbook.beans.ImageEntry;
 
 public class EntryDAO {
 	
@@ -11,7 +12,8 @@ public class EntryDAO {
 	}
 
 	public void addEntry(Entry e) {
-		// Add entry logic
+		String entryType = e instanceof ImageEntry?"Image":"Text";
+		System.out.println("Entry type is"+entryType);
 	}
 	
 	public void approveEntry(Entry e) {
